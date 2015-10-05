@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.students.songsconcordance.WordGroupDef">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Define a word group:"
+        android:id="@+id/textTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_below="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Word Group Name:"
+        android:id="@+id/textWordGroupName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editWordGroupName"
+        android:layout_alignBaseline="@+id/textWordGroupName"
+        android:layout_toRightOf="@+id/textWordGroupName"
+        android:layout_toEndOf="@+id/textWordGroupName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="" />
+
+    <TextView
+        android:layout_below="@+id/textWordGroupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Words in Word Group:"
+        android:id="@+id/textWordInWordGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editWordInWordGroup"
+        android:layout_alignBaseline="@+id/textWordInWordGroup"
+        android:layout_toRightOf="@+id/textWordInWordGroup"
+        android:layout_toEndOf="@+id/textWordInWordGroup"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E1E1E1"
+        android:id="@+id/listWords"
+        android:layout_below="@+id/buttonWords"
+        android:layout_above="@+id/buttonDefine" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add words"
+        android:id="@+id/buttonWords"
+        android:layout_below="@+id/textWordInWordGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="addWord" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Define Word Group"
+        android:id="@+id/buttonDefine"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="defineWordGroup" />
+</RelativeLayout>
+<!-- From: file:/Users/eladb/Projects/SongsConcordance/app/src/main/res/layout/activity_word_group_def.xml -->

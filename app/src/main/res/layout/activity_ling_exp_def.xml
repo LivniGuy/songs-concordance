@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.students.songsconcordance.LingExpDef">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Define a linguistic expression:"
+        android:id="@+id/textTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_below="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Linguistic Expression:"
+        android:id="@+id/textLingExp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editLingExp"
+        android:layout_alignBaseline="@+id/textLingExp"
+        android:layout_toRightOf="@+id/textLingExp"
+        android:layout_toEndOf="@+id/textLingExp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="ling exp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E1E1E1"
+        android:id="@+id/listLingExps"
+        android:layout_below="@+id/buttonAddLingExp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Linguistic Expression"
+        android:id="@+id/buttonAddLingExp"
+        android:onClick="addLingExp"
+        android:layout_below="@+id/textLingExp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

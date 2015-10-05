@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.students.songsconcordance.SongSearch">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_song_name"
+        android:id="@+id/textSongName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSongName"
+        android:layout_alignBaseline="@+id/textSongName"
+        android:layout_toRightOf="@+id/textSongName"
+        android:layout_toEndOf="@+id/textSongName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_below="@+id/textSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Performer name:"
+        android:id="@+id/textPerformerName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editPerformerName"
+        android:layout_alignBaseline="@+id/textPerformerName"
+        android:layout_below="@+id/editSongName"
+        android:layout_toRightOf="@+id/textPerformerName"
+        android:layout_toEndOf="@+id/textPerformerName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_below="@+id/textPerformerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Album name:"
+        android:id="@+id/textSongAlbumName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAlbumName"
+        android:layout_alignBaseline="@+id/textSongAlbumName"
+        android:layout_below="@+id/editPerformerName"
+        android:layout_toRightOf="@+id/textSongAlbumName"
+        android:layout_toEndOf="@+id/textSongAlbumName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_below="@+id/textSongAlbumName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Song writer name:"
+        android:id="@+id/textSongWriterName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSongWriterName"
+        android:layout_alignBaseline="@+id/textSongWriterName"
+        android:layout_below="@+id/editAlbumName"
+        android:layout_toRightOf="@+id/textSongWriterName"
+        android:layout_toEndOf="@+id/textSongWriterName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_below="@+id/textSongWriterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Words in song:"
+        android:id="@+id/textWordInSong"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_song_search_components_vertical_margin" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editWordInSong"
+        android:layout_alignBaseline="@+id/textWordInSong"
+        android:layout_toRightOf="@+id/textWordInSong"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E1E1E1"
+        android:id="@+id/listWords"
+        android:layout_below="@+id/buttonWords"
+        android:layout_above="@+id/buttonSearch" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add words"
+        android:id="@+id/buttonWords"
+        android:layout_below="@+id/textWordInSong"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="addWord" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Songs"
+        android:id="@+id/buttonSearch"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="searchSongs" />
+
+</RelativeLayout>
+<!-- From: file:/Users/eladb/Projects/SongsConcordance/app/src/main/res/layout/activity_song_search.xml -->

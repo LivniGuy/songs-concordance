@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.students.songsconcordance.WordGroupMng">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Manage word groups:"
+        android:id="@+id/textTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a new word group"
+        android:id="@+id/buttonNavNewWG"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:onClick="navToWordGroupDef"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Existing word groups:"
+        android:id="@+id/textExistingWordGroups"
+        android:layout_below="@+id/buttonNavNewWG"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E1E1E1"
+        android:id="@+id/listWordGroups"
+        android:layout_below="@+id/textExistingWordGroups" />
+
+
+
+</RelativeLayout>
+<!-- From: file:/Users/eladb/Projects/SongsConcordance/app/src/main/res/layout/activity_word_group_mng.xml -->
