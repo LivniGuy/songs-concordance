@@ -29,10 +29,8 @@ import retrofit.client.Response;
 
 public class BrowseSongs extends AppCompatActivity {
 
-    ProgressBar pb;
-
-
-    List<Song> songList;
+    public ProgressBar pb;
+    public List<Song> songList;
     public int chosenSongID;
     public String chosenSongName;
     public String chosenSongPerformerName;
