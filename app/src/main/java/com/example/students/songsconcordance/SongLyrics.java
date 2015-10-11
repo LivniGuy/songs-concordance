@@ -98,9 +98,6 @@ public class SongLyrics extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -111,12 +108,22 @@ public class SongLyrics extends AppCompatActivity {
             showSongLyricsIndex();
             return true;
         }
+        if (id == R.id.action_search_word_by_location) {
+            showWordSearchByLocation();
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
 
     private void showSongLyricsIndex() {
         Intent intent = new Intent(SongLyrics.this, SongLyricsIndex.class);
+        intent.putExtra(MainActivity.SONG, song);
+        startActivity(intent);
+    }
+
+    private void showWordSearchByLocation() {
+        Intent intent = new Intent(SongLyrics.this, WordSearchByLocation.class);
         intent.putExtra(MainActivity.SONG, song);
         startActivity(intent);
     }
