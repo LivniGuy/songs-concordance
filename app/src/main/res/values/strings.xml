@@ -4,6 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="action_song_lyrics_index">Song Lyrics Index</string>
+    <string name="action_search_word_by_location">Search Word By Location</string>
     <string name="action_user_name">Username</string>
     <string name="title_activity_main">Songs Concordance App!</string>
     <string name="welcome">Welcome to the Songs Concordance App!</string>
@@ -14,7 +15,11 @@
     <string name="song_name_placeholder">Song name</string>
     <string name="title_activity_song_lyrics">Song Lyrics</string>
     <string name="text_song_name">Song name:</string>
+    <string name="text_stanza">Stanza:</string>
+    <string name="text_line">Line:</string>
+    <string name="text_word_in_line">Word In Line:</string>
     <string name="title_activity_song_lyrics_index">Song Lyrics Index</string>
+    <string name="title_search_word_by_location">Search Word By Location</string>
     <string name="title_activity_login">Sign in</string>
     <string name="action_index_for_word_group">Index for Word Group</string>
     <string name="delete">Delete</string>
