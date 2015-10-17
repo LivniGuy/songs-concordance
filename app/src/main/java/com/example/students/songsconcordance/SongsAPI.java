@@ -31,6 +31,12 @@ public interface SongsAPI {
                                 @Query("USER_ID") String userID,
                                 @Query("WORD_GROUP_ID") String chosenWordGroupID, Callback<String> response);
 
+    @GET("/feeds/wordbylocation.php")
+    void getWordByLocationFeed(@Query("songid") String songid,
+                               @Query("wordline") String wordline,
+                               @Query("wordinline") String wordinline,
+                               @Query("stanza") String stanza, Callback<String> response);
+
     @GET("/feeds/wordgroups.php")
     void getWordGroupsFeed(@Query("USER_ID") String userID, Callback<List<JsonObject>> response);
 

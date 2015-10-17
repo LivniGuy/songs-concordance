@@ -64,12 +64,12 @@
             android:label="@string/title_activity_song_lyrics_index" >
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" >
+            android:name=".WordSearchByLocation"
+            android:label="@string/title_search_word_by_location" >
         </activity>
         <activity
-            android:name=".WorkGroupMng"
-            android:label="@string/title_activity_work_group_mng" >
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" >
         </activity>
         <activity
             android:name=".WordGroupMng"

@@ -1,8 +1,6 @@
 package com.example.students.songsconcordance;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -13,15 +11,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.JsonObject;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 import retrofit.Callback;
 import retrofit.RestAdapter;
@@ -29,12 +25,12 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 public class WordSearchByLocation extends AppCompatActivity {
-    static SingletonUser userInstance = SingletonUser.getSingletonUserInstance();
+
     public Song song;
-    public String songLyricsIndex;
+    public String wordResult;
     RestAdapter adapter;
     SongsAPI api;
-    String chosenWordGroupID;
+    String wordLine, wordInLine, stanza;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,47 +58,6 @@ public class WordSearchByLocation extends AppCompatActivity {
                 .build();
 
         api = adapter.create(SongsAPI.class);
-
-//        if (isOnline()) {
-//            requestData();
-//        } else {
-//            Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
-//        }
-    }
-
-    private void requestData() {
-        api.getSongLyricsIndexFeed(String.valueOf(song.getID()),
-                userInstance.getUser().getID(),
-                chosenWordGroupID,
-                new Callback<String>() {
-            @Override
-            public void success(String s, Response response) {
-                songLyricsIndex = s;
-                updateDisplay();
-            }
-
-            @Override
-            public void failure(RetrofitError error) {
-                Log.e("ERROR", "failure");
-            }
-        });
-    }
-
-    private void updateDisplay() {
-        TextView textLyricsIndex = (TextView) findViewById(R.id.textLyricsIndex);
-
-        textLyricsIndex.setText(songLyricsIndex);
-        textLyricsIndex.setMovementMethod(new ScrollingMovementMethod());
-    }
-
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        } else {
-            return false;
-        }
     }
 
     @Override
@@ -123,86 +78,59 @@ public class WordSearchByLocation extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void showWordGroupDialog() {
-        AlertDialog.Builder builderSingle = new AlertDialog.Builder(WordSearchByLocation.this);
-        builderSingle.setIcon(R.mipmap.ic_launcher);
-        builderSingle.setTitle("Select Word Group:");
+    public void searchWord(View view) {
+        //Getting the search params from the layout
+        EditText editWordLine = (EditText) findViewById(R.id.editLine);
+        EditText editWordInLine = (EditText) findViewById(R.id.editWordInLine);
+        EditText editStanza = (EditText) findViewById(R.id.editStanza);
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                WordSearchByLocation.this,
-                android.R.layout.select_dialog_singlechoice);
-        final ArrayList<String> wordGroupIDs = new ArrayList<String>();
+        //Setting the search params for the Browse Songs activity
+        WordByLocationParams wblp = new WordByLocationParams(String.valueOf(song.getID()),
+                editWordLine.getText().toString(),
+                editWordInLine.getText().toString(),
+                editStanza.getText().toString());
 
-        // Get user's word groups from server
-        api.getWordGroupsFeed(userInstance.getUser().getID(), new Callback<List<JsonObject>>() {
-            @Override
-            public void success(List<JsonObject> jsonObjects, Response response) {
-                for (JsonObject jo : jsonObjects) {
-                    arrayAdapter.add(jo.get("WORD_GROUP_NAME").getAsString());
-                    wordGroupIDs.add(jo.get("WORD_GROUP_ID").getAsString());
-                }
-            }
+        this.wordLine = wblp.getWordLine();
+        this.wordInLine = wblp.getWordInLine();
+        this.stanza = wblp.getStanza();
 
-            @Override
-            public void failure(RetrofitError error) {
-                Log.e("ERROR", "failure");
-            }
-        });
-
-        builderSingle.setNegativeButton(
-                "Cancel",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-
-        builderSingle.setAdapter(
-                arrayAdapter,
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String strName = arrayAdapter.getItem(which);
-                        chosenWordGroupID = wordGroupIDs.get(which);
-                        AlertDialog.Builder builderInner = new AlertDialog.Builder(
-                                WordSearchByLocation.this);
-                        builderInner.setMessage(strName);
-                        builderInner.setTitle("Your Selected Item is");
-                        builderInner.setPositiveButton(
-                                "Ok",
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(
-                                            DialogInterface dialog,
-                                            int which) {
-                                        dialog.dismiss();
-                                    }
-                                });
-                        builderInner.show();
-                        requestData();
-                    }
-                });
-        builderSingle.show();
+        if (isOnline()) {
+            requestData();
+        } else {
+            Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
+        }
     }
 
-    public void searchWord(View view) {
-//        //Getting the search params from the layout
-//        EditText editSongName = (EditText) findViewById(R.id.editSongName);
-//        EditText editPerformerName = (EditText) findViewById(R.id.editPerformerName);
-//        EditText editAlbumName = (EditText) findViewById(R.id.editAlbumName);
-//        EditText editSongWriterName = (EditText) findViewById(R.id.editSongWriterName);
-//
-//        //Setting the search params for the Browse Songs activity
-//        ssp = new SongSearchParams(editSongName.getText().toString(),
-//                editPerformerName.getText().toString(),
-//                editAlbumName.getText().toString(),
-//                editSongWriterName.getText().toString(),
-//                filterWords);
-//
-//        Intent intent = new Intent(SongSearch.this, BrowseSongs.class);
-//        //intent.putExtra(MainActivity.SONG_ID, chosenSongID);
-//        intent.putExtra(MainActivity.SEARCH_PARAMS, ssp);
-//        startActivity(intent);
+    protected boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void requestData() {
+        api.getWordByLocationFeed(String.valueOf(song.getID()), wordLine,wordInLine,stanza,
+                new Callback<String>() {
+                    @Override
+                    public void success(String w, Response response) {
+                        wordResult = w;
+                        updateDisplay();
+                    }
+
+                    @Override
+                    public void failure(RetrofitError error) {
+                        Log.e("ERROR: " , "failure - " + error.getMessage());
+                    }
+                });
+    }
+
+    private void updateDisplay() {
+        TextView textLyricsIndex = (TextView) findViewById(R.id.wordResult);
+
+        textLyricsIndex.setText("Word in requested location is: " + wordResult);
+        textLyricsIndex.setMovementMethod(new ScrollingMovementMethod());
     }
 }
