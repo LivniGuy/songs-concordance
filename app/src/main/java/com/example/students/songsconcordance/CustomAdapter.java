@@ -27,7 +27,7 @@ class CustomAdapter extends ArrayAdapter<String>{
         ImageView imageView = (ImageView) customView.findViewById(R.id.menuImage);
 
         textView.setText(singleTextItem);
-        imageView.setImageResource(R.mipmap.ic_launcher);
+        imageView.setImageResource(R.mipmap.note);
         return customView;
     }
 }
