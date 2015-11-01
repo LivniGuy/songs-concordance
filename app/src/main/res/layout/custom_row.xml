@@ -7,7 +7,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/menuImage"
-        android:src="@mipmap/ic_launcher"
+        android:src="@mipmap/note"
         android:layout_margin="5dp" />
 
     <TextView
@@ -17,4 +17,5 @@
         android:text="Large Text"
         android:id="@+id/menuText"
         android:layout_margin="5dp" />
+
 </LinearLayout>

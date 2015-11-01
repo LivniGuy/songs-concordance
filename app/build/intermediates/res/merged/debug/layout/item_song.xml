@@ -59,4 +59,4 @@
         android:layout_toEndOf="@+id/textSongName" />
 
 </RelativeLayout>
-<!-- From: file:/Users/eladb/Projects/SongsConcordance/app/src/main/res/layout/item_song.xml -->
+<!-- From: file:/D:/Users/Guy.livni/AndroidStudioProjects/SongsConcordance/app/src/main/res/layout/item_song.xml -->

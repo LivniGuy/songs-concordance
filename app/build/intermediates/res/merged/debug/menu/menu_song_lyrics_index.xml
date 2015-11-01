@@ -7,4 +7,4 @@
     <item android:id="@+id/action_index_for_word_group" android:title="@string/action_index_for_word_group"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<!-- From: file:/Users/eladb/Projects/SongsConcordance/app/src/main/res/menu/menu_song_lyrics_index.xml -->
+<!-- From: file:/D:/Users/Guy.livni/AndroidStudioProjects/SongsConcordance/app/src/main/res/menu/menu_song_lyrics_index.xml -->

@@ -60,4 +60,4 @@
         android:layout_below="@id/textSongWriterName"
         android:background="#E1E1E1" />
 </RelativeLayout>
-<!-- From: file:/Users/eladb/Projects/SongsConcordance/app/src/main/res/layout/activity_song_lyrics.xml -->
+<!-- From: file:/D:/Users/Guy.livni/AndroidStudioProjects/SongsConcordance/app/src/main/res/layout/activity_song_lyrics.xml -->
