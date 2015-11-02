@@ -58,5 +58,5 @@
         android:gravity="center"
         android:scrollbars="vertical"
         android:layout_below="@id/textSongWriterName"
-        android:background="#E1E1E1" />
+        android:background="#333333" />
 </RelativeLayout>

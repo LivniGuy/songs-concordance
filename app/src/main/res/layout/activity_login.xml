@@ -35,7 +35,6 @@
         android:text="Login"
         android:id="@+id/buttonLogin"
         android:layout_centerHorizontal="true"
-        android:onClick="login"
-        android:background="@color/wallet_holo_blue_light"/>
+        android:onClick="login"/>
 
 </RelativeLayout>

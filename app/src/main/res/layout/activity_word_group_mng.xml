@@ -38,7 +38,7 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#E1E1E1"
+        android:background="#333333"
         android:id="@+id/listWordGroups"
         android:layout_below="@+id/textExistingWordGroups" />
 
