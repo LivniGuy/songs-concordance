@@ -18,7 +18,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light" >
+        android:theme="@android:style/Theme.Holo" >
         <activity
             android:name=".SplashScreen"
             android:label="@string/app_name"
@@ -43,7 +43,7 @@
             android:label="@string/title_activity_word_group_def" >
         </activity>
         <activity
-            android:name=".LingExpDef"
+            android:name=".Song$LingExpDef"
             android:label="@string/title_activity_ling_exp_def" >
         </activity>
 
