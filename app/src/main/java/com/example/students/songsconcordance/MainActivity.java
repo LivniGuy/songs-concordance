@@ -3,14 +3,12 @@ package com.example.students.songsconcordance;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.internal.view.menu.ListMenuItemView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     static SingletonUser userInstance = SingletonUser.getSingletonUserInstance();
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 break;
                             case 3:
-                                intent = new Intent(MainActivity.this, LingExpDef.class);
+                                intent = new Intent(MainActivity.this, Song.LingExpDef.class);
                                 startActivity(intent);
                                 break;
                         }

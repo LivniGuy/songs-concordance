@@ -14,6 +14,7 @@
         android:id="@+id/optionsListView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:listSelector="@color/wallet_holo_blue_light" />
+        android:background="#333333"
+        android:listSelector="@color/wallet_hint_foreground_holo_dark" />
 </RelativeLayout>
 <!-- From: file:/D:/Users/Guy.livni/AndroidStudioProjects/SongsConcordance/app/src/main/res/layout/activity_main.xml -->

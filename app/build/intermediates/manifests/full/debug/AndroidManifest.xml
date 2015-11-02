@@ -35,7 +35,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light" >
+        android:theme="@style/Theme.AppCompat" >
         <activity
             android:name="com.example.students.songsconcordance.SplashScreen"
             android:label="@string/app_name"
@@ -60,7 +60,7 @@
             android:label="@string/title_activity_word_group_def" >
         </activity>
         <activity
-            android:name="com.example.students.songsconcordance.LingExpDef"
+            android:name="com.example.students.songsconcordance.Song$LingExpDef"
             android:label="@string/title_activity_ling_exp_def" >
         </activity>
 

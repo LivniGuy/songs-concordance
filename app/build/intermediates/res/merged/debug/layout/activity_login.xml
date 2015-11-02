@@ -35,8 +35,7 @@
         android:text="Login"
         android:id="@+id/buttonLogin"
         android:layout_centerHorizontal="true"
-        android:onClick="login"
-        android:background="@color/wallet_holo_blue_light"/>
+        android:onClick="login"/>
 
 </RelativeLayout>
 <!-- From: file:/D:/Users/Guy.livni/AndroidStudioProjects/SongsConcordance/app/src/main/res/layout/activity_login.xml -->

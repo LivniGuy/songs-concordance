@@ -157,7 +157,7 @@ MERGED from [com.android.support:support-v4:23.0.0] D:\Users\Guy.livni\AndroidSt
 	android:icon
 		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:19:9-43
 	android:theme
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:21:9-53
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:21:9-47
 activity#com.example.students.songsconcordance.SplashScreen
 ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:22:9-31:20
 	android:label
@@ -196,12 +196,12 @@ ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\mai
 		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:43:13-66
 	android:name
 		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:42:13-41
-activity#com.example.students.songsconcordance.LingExpDef
+activity#com.example.students.songsconcordance.Song$LingExpDef
 ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:45:9-48:20
 	android:label
 		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:47:13-64
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:46:13-39
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:46:13-44
 meta-data#com.google.android.gms.version
 ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:50:9-52:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
