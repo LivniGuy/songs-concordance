@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:2:1-80:12
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:2:1-71:12
 	package
 		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:3:5-52
 		INJECTED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\mai
 		INJECTED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:6:5-79
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:5:5-79
 MERGED from [com.google.android.gms:play-services-ads:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-analytics:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.gms:play-services-analytics:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\AndroidManifest.xml:22:5-79
@@ -24,9 +24,9 @@ MERGED from [com.google.android.gms:play-services-maps:7.8.0] D:\Users\Guy.livni
 MERGED from [com.google.android.gms:play-services-nearby:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\AndroidManifest.xml:19:5-79
 MERGED from [com.google.android.gms:play-services-maps:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\AndroidManifest.xml:20:5-78
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:6:22-76
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:7:5-67
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [com.google.android.gms:play-services-ads:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-analytics:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\AndroidManifest.xml:21:5-67
 MERGED from [com.google.android.gms:play-services-analytics:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\AndroidManifest.xml:21:5-67
@@ -38,27 +38,9 @@ MERGED from [com.google.android.gms:play-services-maps:7.8.0] D:\Users\Guy.livni
 MERGED from [com.google.android.gms:play-services-wallet:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-maps:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\AndroidManifest.xml:21:5-66
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:7:22-64
-uses-permission#android.permission.USE_CREDENTIALS
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:12:5-74
-MERGED from [com.google.android.gms:play-services-wallet:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\AndroidManifest.xml:22:5-73
-	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:12:22-71
-uses-permission#android.permission.GET_ACCOUNTS
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:13:5-71
-MERGED from [com.google.android.gms:play-services-wallet:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\AndroidManifest.xml:21:5-70
-	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:13:22-68
-uses-permission#android.permission.READ_PROFILE
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:14:5-71
-	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:14:22-68
-uses-permission#android.permission.READ_CONTACTS
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:15:5-72
-	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:15:22-69
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:17:5-78:19
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:8:5-69:19
 MERGED from [com.android.support:appcompat-v7:23.0.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\7.8.0\AndroidManifest.xml:19:5-20
@@ -151,59 +133,59 @@ MERGED from [com.google.android.gms:play-services-wearable:7.8.0] D:\Users\Guy.l
 MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.0.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:20:9-41
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:11:9-41
 	android:allowBackup
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:19:9-43
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:10:9-43
 	android:theme
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:21:9-47
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:12:9-47
 activity#com.example.students.songsconcordance.SplashScreen
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:22:9-31:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:13:9-22:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:24:13-45
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:15:13-45
 	android:theme
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:25:13-66
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:16:13-66
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:23:13-41
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:14:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:26:13-30:29
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:20:27-74
 activity#com.example.students.songsconcordance.MainActivity
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:23:9-26:20
+	android:label
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:25:13-56
+	android:name
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:24:13-41
+activity#com.example.students.songsconcordance.SongSearch
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:27:9-31:20
+	android:label
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:29:13-63
+	android:windowSoftInputMode
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:30:13-70
+	android:name
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:28:13-39
+activity#com.example.students.songsconcordance.WordGroupDef
 ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:32:9-35:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:34:13-56
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:34:13-66
 	android:name
 		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:33:13-41
-activity#com.example.students.songsconcordance.SongSearch
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:36:9-40:20
-	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:38:13-63
-	android:windowSoftInputMode
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:39:13-70
-	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:37:13-39
-activity#com.example.students.songsconcordance.WordGroupDef
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:41:9-44:20
-	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:43:13-66
-	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:42:13-41
 activity#com.example.students.songsconcordance.Song$LingExpDef
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:45:9-48:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:36:9-39:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:47:13-64
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:38:13-64
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:46:13-44
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:37:13-44
 meta-data#com.google.android.gms.version
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:50:9-52:69
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:41:9-43:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
@@ -234,45 +216,45 @@ MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni
 MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-base:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:52:13-66
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:43:13-66
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:51:13-58
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:42:13-58
 activity#com.example.students.songsconcordance.BrowseSongs
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:54:9-57:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:45:9-48:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:56:13-64
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:47:13-64
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:55:13-40
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:46:13-40
 activity#com.example.students.songsconcordance.SongLyrics
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:58:9-61:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:49:9-52:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:60:13-63
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:51:13-63
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:59:13-39
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:50:13-39
 activity#com.example.students.songsconcordance.SongLyricsIndex
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:62:9-65:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:53:9-56:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:64:13-69
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:55:13-69
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:63:13-44
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:54:13-44
 activity#com.example.students.songsconcordance.WordSearchByLocation
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:66:9-69:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:57:9-60:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:68:13-66
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:59:13-66
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:67:13-49
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:58:13-49
 activity#com.example.students.songsconcordance.LoginActivity
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:70:9-73:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:61:9-64:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:72:13-57
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:63:13-57
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:71:13-42
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:62:13-42
 activity#com.example.students.songsconcordance.WordGroupMng
-ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:74:9-77:20
+ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:65:9-68:20
 	android:label
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:76:13-66
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:67:13-66
 	android:name
-		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:75:13-41
+		ADDED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:66:13-41
 uses-sdk
 INJECTED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\AndroidManifest.xml:20:5-43
@@ -404,8 +386,16 @@ MERGED from [com.google.android.gms:play-services-maps:7.8.0] D:\Users\Guy.livni
 	android:required
 		ADDED from [com.google.android.gms:play-services-maps:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\AndroidManifest.xml:25:8-31
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:2:1-80:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
+IMPLIED from D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\src\main\AndroidManifest.xml:2:1-71:12 reason: com.google.android.gms.maps requested WRITE_EXTERNAL_STORAGE
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.android.gms:play-services-gcm:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\AndroidManifest.xml:21:5-82
 	android:name
 		ADDED from [com.google.android.gms:play-services-gcm:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\AndroidManifest.xml:21:22-79
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from [com.google.android.gms:play-services-wallet:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\AndroidManifest.xml:21:5-70
+	android:name
+		ADDED from [com.google.android.gms:play-services-wallet:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\AndroidManifest.xml:21:22-68
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from [com.google.android.gms:play-services-wallet:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\AndroidManifest.xml:22:5-73
+	android:name
+		ADDED from [com.google.android.gms:play-services-wallet:7.8.0] D:\Users\Guy.livni\AndroidStudioProjects\SongsConcordance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\AndroidManifest.xml:22:22-71
