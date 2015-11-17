@@ -71,6 +71,8 @@ public class SongLyrics extends AppCompatActivity {
                 Log.e("ERROR", "failure");
             }
         });
+
+
     }
 
     private void updateDisplay() {

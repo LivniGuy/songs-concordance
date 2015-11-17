@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 break;
                             case 3:
-                                intent = new Intent(MainActivity.this, Song.LingExpDef.class);
+                                intent = new Intent(MainActivity.this, LingExpDef.class);
                                 startActivity(intent);
                                 break;
                         }
