@@ -32,7 +32,7 @@ import retrofit.client.Response;
 /**
  * Created by Guy on 17/11/2015.
  */
-public static class LingExpDef extends AppCompatActivity {
+public class LingExpDef extends AppCompatActivity {
     static SingletonUser userInstance = SingletonUser.getSingletonUserInstance();
     ListView listLingExps;
     ArrayList<String> arrayLingExps;
