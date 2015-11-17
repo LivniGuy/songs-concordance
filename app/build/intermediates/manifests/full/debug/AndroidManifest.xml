@@ -51,7 +51,7 @@
             android:label="@string/title_activity_word_group_def" >
         </activity>
         <activity
-            android:name="com.example.students.songsconcordance.Song$LingExpDef"
+            android:name="com.example.students.songsconcordance.LingExpDef"
             android:label="@string/title_activity_ling_exp_def" >
         </activity>
 

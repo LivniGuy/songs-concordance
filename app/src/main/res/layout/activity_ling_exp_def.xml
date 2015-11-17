@@ -36,7 +36,7 @@
         android:layout_toEndOf="@+id/textLingExp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="ling exp" />
+        android:text="" />
 
     <ListView
         android:layout_width="wrap_content"

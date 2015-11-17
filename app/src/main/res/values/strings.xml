@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_song_lyrics_index">Song Lyrics Index</string>
     <string name="action_search_word_by_location">Search Word By Location</string>
+    <string name="action_search_linguistic_expression">Find Linguistic Expression</string>
     <string name="action_user_name">Username</string>
     <string name="title_activity_main">Songs Concordance App!</string>
     <string name="welcome">Welcome to the Songs Concordance App!</string>

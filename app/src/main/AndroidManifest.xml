@@ -34,7 +34,7 @@
             android:label="@string/title_activity_word_group_def" >
         </activity>
         <activity
-            android:name=".Song$LingExpDef"
+            android:name=".LingExpDef"
             android:label="@string/title_activity_ling_exp_def" >
         </activity>
 

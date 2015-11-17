@@ -32,9 +32,9 @@ public class SongLyricsIndex extends AppCompatActivity {
     static SingletonUser userInstance = SingletonUser.getSingletonUserInstance();
     public Song song;
     public String songLyricsIndex;
-    RestAdapter adapter;
-    SongsAPI api;
-    String chosenWordGroupID;
+    public RestAdapter adapter;
+    public SongsAPI api;
+    public String chosenWordGroupID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
