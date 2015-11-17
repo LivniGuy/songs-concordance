@@ -54,8 +54,8 @@
         android:text="index goes here..."
         android:id="@+id/textLyricsIndex"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:gravity="left"
         android:scrollbars="vertical"
         android:layout_below="@id/textSongWriterName"
         android:background="#333333" />
