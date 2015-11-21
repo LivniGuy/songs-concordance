@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.students.songsconcordance.utils.Utils;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
@@ -99,7 +100,7 @@ public class WordGroupMng extends AppCompatActivity {
     }
 
     private void requestData() {
-        if (isOnline()) {
+        if (Utils.isOnline(getBaseContext())) {
             api.getWordGroupsFeed(userInstance.getUser().getID(),
                     new Callback<List<JsonObject>>() {
                         @Override
@@ -118,16 +119,6 @@ public class WordGroupMng extends AppCompatActivity {
                     });
         } else {
             Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        } else {
-            return false;
         }
     }
 

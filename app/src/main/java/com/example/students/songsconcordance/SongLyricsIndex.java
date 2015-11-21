@@ -1,13 +1,10 @@
 package com.example.students.songsconcordance;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
@@ -16,9 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.students.songsconcordance.utils.Utils;
 import com.google.gson.JsonObject;
-
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +59,7 @@ public class SongLyricsIndex extends AppCompatActivity {
 
         api = adapter.create(SongsAPI.class);
 
-        if (isOnline()) {
+        if (Utils.isOnline(getBaseContext())) {
             requestData();
         } else {
             Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
@@ -93,16 +89,6 @@ public class SongLyricsIndex extends AppCompatActivity {
 
         textLyricsIndex.setText(songLyricsIndex);
         textLyricsIndex.setMovementMethod(new ScrollingMovementMethod());
-    }
-
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        } else {
-            return false;
-        }
     }
 
     @Override

@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.students.songsconcordance.utils.Utils;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -94,20 +96,10 @@ public class WordSearchByLocation extends AppCompatActivity {
         this.wordInLine = wblp.getWordInLine();
         this.stanza = wblp.getStanza();
 
-        if (isOnline()) {
+        if (Utils.isOnline(getBaseContext())) {
             requestData();
         } else {
             Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        } else {
-            return false;
         }
     }
 

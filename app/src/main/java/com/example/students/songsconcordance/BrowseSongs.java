@@ -16,6 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.students.songsconcordance.utils.Utils;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -52,7 +54,7 @@ public class BrowseSongs extends AppCompatActivity {
         //songID = intent.getStringExtra(MainActivity.SONG);
         ssp = (SongSearchParams) intent.getSerializableExtra(MainActivity.SEARCH_PARAMS);
 
-        if (isOnline()) {
+        if (Utils.isOnline(getBaseContext())) {
             requestData();
 
             //Handle songsListView clicks
@@ -97,13 +99,9 @@ public class BrowseSongs extends AppCompatActivity {
                         }
                     }
             );
-
         } else {
             Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
         }
-
-
-
     }
 
     private void requestData() {
@@ -160,16 +158,6 @@ public class BrowseSongs extends AppCompatActivity {
         ListView songsListView = (ListView) findViewById(android.R.id.list);
         songsListView.setAdapter(adapter);
 //        setListAdapter(adapter);
-    }
-
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        } else {
-            return false;
-        }
     }
 
     @Override

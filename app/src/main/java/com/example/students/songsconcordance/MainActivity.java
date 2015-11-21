@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 "Browse songs from list",
                 "Search for song",
                 "Manage word groups",
-                "Manage linguistic expressions"
+                "Manage linguistic expressions",
+                "Show words list"
         };
 
         ListAdapter optionsAdapter = new CustomAdapter(this, options);
@@ -61,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case 3:
                                 intent = new Intent(MainActivity.this, LingExpDef.class);
+                                startActivity(intent);
+                                break;
+                            case 4:
+                                intent = new Intent(MainActivity.this, WordsList.class);
                                 startActivity(intent);
                                 break;
                         }

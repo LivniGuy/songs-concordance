@@ -1,12 +1,9 @@
 package com.example.students.songsconcordance;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
@@ -20,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.students.songsconcordance.utils.Utils;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
@@ -66,7 +64,7 @@ public class SongLyrics extends AppCompatActivity {
 
         textLyrics = (TextView) findViewById(R.id.textLyrics);
 
-        if (isOnline()) {
+        if (Utils.isOnline(getBaseContext())) {
             requestData();
         } else {
             Toast.makeText(this, "Network isn't available", Toast.LENGTH_LONG).show();
@@ -92,8 +90,6 @@ public class SongLyrics extends AppCompatActivity {
                 Log.e("ERROR", "failure");
             }
         });
-
-
     }
 
     private void updateDisplay() {
@@ -101,15 +97,6 @@ public class SongLyrics extends AppCompatActivity {
         textLyrics.setMovementMethod(new ScrollingMovementMethod());
     }
 
-    protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -146,10 +133,10 @@ public class SongLyrics extends AppCompatActivity {
         builderSingle.setIcon(R.mipmap.ic_launcher);
         builderSingle.setTitle("Select Linguistic Expression:");
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 SongLyrics.this,
                 android.R.layout.select_dialog_singlechoice);
-        final ArrayList<String> linguisticExpressionIDs = new ArrayList<String>();
+        final ArrayList<String> linguisticExpressionIDs = new ArrayList<>();
 
         // Get user's linguistic expressions from server
         api.getLingExpsFeed(userInstance.getUser().getID(),
