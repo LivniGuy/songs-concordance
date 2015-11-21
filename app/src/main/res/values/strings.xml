@@ -27,6 +27,7 @@
     <string name="cancel">Cancel</string>
     <string name="title_activity_work_group_mng">WorkGroupMng</string>
     <string name="title_activity_word_group_mng">WordGroupMng</string>
+    <string name="title_activity_words_list">WordsList</string>
 
 
 </resources>
