@@ -74,8 +74,7 @@ public class LingExpDef extends AppCompatActivity {
                                 new Callback<String>() {
                                     @Override
                                     public void success(String s, Response response) {
-                                        //Toast.makeText(LingExpDef.this, s, Toast.LENGTH_LONG).show();
-                                        //requestData();
+
                                     }
 
                                     @Override

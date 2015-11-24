@@ -1,5 +1,6 @@
 package com.example.students.songsconcordance;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
@@ -42,6 +43,9 @@ public interface SongsAPI {
 
     @GET("/feeds/lingexps.php")
     void getLingExpsFeed(@Query("USER_ID") String userID, Callback<List<JsonObject>> response);
+
+    @GET("/feeds/wordslist.php")
+    void getWordsList(@Query("songid") String songid, Callback<List<JsonObject>> response);
 
     @GET("/manage/login.php")
     void getLogin(@QueryMap Map<String, String> params, Callback<User> response);

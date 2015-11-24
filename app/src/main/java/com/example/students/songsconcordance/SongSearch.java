@@ -20,10 +20,10 @@ import retrofit.client.Response;
 
 public class SongSearch extends AppCompatActivity {
 
-    ListView listWords;
-    SongSearchParams ssp;
-    ArrayList<String> filterWords;
-    ArrayAdapter<String> arrayAdapter;
+    public ListView listWords;
+    public SongSearchParams ssp;
+    public ArrayList<String> filterWords;
+    public ArrayAdapter<String> arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
