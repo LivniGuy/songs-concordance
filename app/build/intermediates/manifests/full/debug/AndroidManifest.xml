@@ -83,6 +83,10 @@
             android:name="com.example.students.songsconcordance.WordGroupMng"
             android:label="@string/title_activity_word_group_mng" >
         </activity>
+        <activity
+            android:name="com.example.students.songsconcordance.WordsList"
+            android:label="@string/title_activity_words_list" >
+        </activity>
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

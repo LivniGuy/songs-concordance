@@ -423,6 +423,7 @@
     <string name="title_activity_song_search">Song Search</string>
     <string name="title_activity_word_group_def">Word Group Definition</string>
     <string name="title_activity_word_group_mng">WordGroupMng</string>
+    <string name="title_activity_words_list">WordsList</string>
     <string name="title_activity_work_group_mng">WorkGroupMng</string>
     <string name="title_search_word_by_location">Search Word By Location</string>
     <!-- From: file:/D:/Users/Guy.livni/AndroidStudioProjects/SongsConcordance/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/res/values/wallet_strings.xml -->

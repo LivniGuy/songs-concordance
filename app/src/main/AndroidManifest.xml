@@ -66,6 +66,10 @@
             android:name=".WordGroupMng"
             android:label="@string/title_activity_word_group_mng" >
         </activity>
+        <activity
+            android:name=".WordsList"
+            android:label="@string/title_activity_words_list" >
+        </activity>
     </application>
 
 </manifest>

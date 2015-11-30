@@ -2293,23 +2293,24 @@ containing a value of this type.
         public static final int activity_splash_screen=0x7f040020;
         public static final int activity_word_group_def=0x7f040021;
         public static final int activity_word_group_mng=0x7f040022;
-        public static final int custom_row=0x7f040023;
-        public static final int item_song=0x7f040024;
-        public static final int mr_media_route_chooser_dialog=0x7f040025;
-        public static final int mr_media_route_controller_material_dialog_b=0x7f040026;
-        public static final int mr_media_route_list_item=0x7f040027;
-        public static final int notification_media_action=0x7f040028;
-        public static final int notification_media_cancel_action=0x7f040029;
-        public static final int notification_template_big_media=0x7f04002a;
-        public static final int notification_template_big_media_narrow=0x7f04002b;
-        public static final int notification_template_lines=0x7f04002c;
-        public static final int notification_template_media=0x7f04002d;
-        public static final int notification_template_part_chronometer=0x7f04002e;
-        public static final int notification_template_part_time=0x7f04002f;
-        public static final int select_dialog_item_material=0x7f040030;
-        public static final int select_dialog_multichoice_material=0x7f040031;
-        public static final int select_dialog_singlechoice_material=0x7f040032;
-        public static final int support_simple_spinner_dropdown_item=0x7f040033;
+        public static final int activity_words_list=0x7f040023;
+        public static final int custom_row=0x7f040024;
+        public static final int item_song=0x7f040025;
+        public static final int mr_media_route_chooser_dialog=0x7f040026;
+        public static final int mr_media_route_controller_material_dialog_b=0x7f040027;
+        public static final int mr_media_route_list_item=0x7f040028;
+        public static final int notification_media_action=0x7f040029;
+        public static final int notification_media_cancel_action=0x7f04002a;
+        public static final int notification_template_big_media=0x7f04002b;
+        public static final int notification_template_big_media_narrow=0x7f04002c;
+        public static final int notification_template_lines=0x7f04002d;
+        public static final int notification_template_media=0x7f04002e;
+        public static final int notification_template_part_chronometer=0x7f04002f;
+        public static final int notification_template_part_time=0x7f040030;
+        public static final int select_dialog_item_material=0x7f040031;
+        public static final int select_dialog_multichoice_material=0x7f040032;
+        public static final int select_dialog_singlechoice_material=0x7f040033;
+        public static final int support_simple_spinner_dropdown_item=0x7f040034;
     }
     public static final class menu {
         public static final int menu_browse_songs=0x7f0f0000;
@@ -2324,7 +2325,8 @@ containing a value of this type.
         public static final int menu_splash_screen=0x7f0f0009;
         public static final int menu_word_group_def=0x7f0f000a;
         public static final int menu_word_group_mng=0x7f0f000b;
-        public static final int menu_work_group_mng=0x7f0f000c;
+        public static final int menu_words_list=0x7f0f000c;
+        public static final int menu_work_group_mng=0x7f0f000d;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -2431,10 +2433,11 @@ containing a value of this type.
         public static final int title_activity_song_search=0x7f07005d;
         public static final int title_activity_word_group_def=0x7f07005e;
         public static final int title_activity_word_group_mng=0x7f07005f;
-        public static final int title_activity_work_group_mng=0x7f070060;
-        public static final int title_search_word_by_location=0x7f070061;
+        public static final int title_activity_words_list=0x7f070060;
+        public static final int title_activity_work_group_mng=0x7f070061;
+        public static final int title_search_word_by_location=0x7f070062;
         public static final int wallet_buy_button_place_holder=0x7f070038;
-        public static final int welcome=0x7f070062;
+        public static final int welcome=0x7f070063;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f09007a;
