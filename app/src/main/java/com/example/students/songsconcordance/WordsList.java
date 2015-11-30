@@ -65,7 +65,6 @@ public class WordsList extends AppCompatActivity {
                 filterWords.add(adapterView.getItemAtPosition(i).toString());
                 ssp = new SongSearchParams("", "", "", "", filterWords);
 
-
                 Intent intent = new Intent(WordsList.this, BrowseSongs.class);
                 //intent.putExtra(MainActivity.SONG_ID, chosenSongID);
                 intent.putExtra(MainActivity.SEARCH_PARAMS, ssp);
