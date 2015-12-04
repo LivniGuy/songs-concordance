@@ -38,6 +38,7 @@ public class BrowseSongs extends AppCompatActivity {
     public String chosenSongPerformerName;
     public String chosenSongAlbumName;
     public String chosenSongWriterName;
+    public String wordToMark;
 
     public Song chosenSong;
     public SongSearchParams ssp;
@@ -53,6 +54,7 @@ public class BrowseSongs extends AppCompatActivity {
         Intent intent = getIntent();
         //songID = intent.getStringExtra(MainActivity.SONG);
         ssp = (SongSearchParams) intent.getSerializableExtra(MainActivity.SEARCH_PARAMS);
+        wordToMark = intent.getStringExtra(MainActivity.WORD_TO_MARK);
 
         if (Utils.isOnline(getBaseContext())) {
             requestData();
@@ -95,6 +97,8 @@ public class BrowseSongs extends AppCompatActivity {
                             Intent intent = new Intent(BrowseSongs.this, SongLyrics.class);
                             //intent.putExtra(MainActivity.SONG_ID, chosenSongID);
                             intent.putExtra(MainActivity.SONG, chosenSong);
+
+                            intent.putExtra(MainActivity.WORD_TO_MARK, wordToMark);
                             startActivity(intent);
                         }
                     }

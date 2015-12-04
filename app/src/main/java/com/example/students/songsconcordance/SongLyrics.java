@@ -33,6 +33,7 @@ public class SongLyrics extends AppCompatActivity {
 
     public TextView textLyrics;
     public String songLyrics;
+    public String wordToMark;
     public Song song;
 
     public RestAdapter adapter;
@@ -48,6 +49,7 @@ public class SongLyrics extends AppCompatActivity {
 
         Intent intent = getIntent();
         song = (Song) intent.getSerializableExtra(MainActivity.SONG);
+        wordToMark = intent.getStringExtra(MainActivity.WORD_TO_MARK);
         Toast.makeText(this, song.getNAME(), Toast.LENGTH_SHORT).show();
 
         TextView tv = (TextView) findViewById(R.id.textSongName);
@@ -95,6 +97,9 @@ public class SongLyrics extends AppCompatActivity {
     private void updateDisplay() {
         textLyrics.setText(songLyrics);
         textLyrics.setMovementMethod(new ScrollingMovementMethod());
+        if (wordToMark != null) {
+            markText(wordToMark);
+        }
     }
 
     @Override
@@ -188,13 +193,13 @@ public class SongLyrics extends AppCompatActivity {
                                 });
                         builderInner.show();
 
-                        markText();
+                        markText(chosenLinguisticExpression);
                     }
                 });
         builderSingle.show();
     }
 
-    private void markText() {
+    private void markText(String textToMark) {
         int lastIndex = 0;
         int count = 0;
         ArrayList<Integer> spanIndex = new ArrayList<>();
@@ -211,26 +216,26 @@ public class SongLyrics extends AppCompatActivity {
 
         // Find all occurences in text
         while(lastIndex != -1){
-            lastIndex = styledString.toString().toLowerCase().indexOf(chosenLinguisticExpression.toLowerCase(), lastIndex);
+            lastIndex = styledString.toString().toLowerCase().indexOf(textToMark.toLowerCase(), lastIndex);
 
             if(lastIndex != -1){
                 spanIndex.add(lastIndex);
                 count ++;
-                lastIndex += chosenLinguisticExpression.length();
+                lastIndex += textToMark.length();
             }
         }
 
         // Mark all occurences in text
         for (Integer index:spanIndex) {
-            styledString.setSpan(new BackgroundColorSpan(Color.LTGRAY), index, index+chosenLinguisticExpression.length(), 0);
-            styledString.setSpan(new ForegroundColorSpan(Color.BLACK), index, index+chosenLinguisticExpression.length(), 0);
+            styledString.setSpan(new BackgroundColorSpan(Color.LTGRAY), index, index+textToMark.length(), 0);
+            styledString.setSpan(new ForegroundColorSpan(Color.BLACK), index, index+textToMark.length(), 0);
         }
 
         textLyrics.setText(styledString);
         
         Toast.makeText(this, "Found " + count + " matches", Toast.LENGTH_LONG).show();
-
     }
+
     private void showSongLyricsIndex() {
         Intent intent = new Intent(SongLyrics.this, SongLyricsIndex.class);
         intent.putExtra(MainActivity.SONG, song);

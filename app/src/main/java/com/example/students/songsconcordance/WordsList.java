@@ -68,6 +68,7 @@ public class WordsList extends AppCompatActivity {
                 Intent intent = new Intent(WordsList.this, BrowseSongs.class);
                 //intent.putExtra(MainActivity.SONG_ID, chosenSongID);
                 intent.putExtra(MainActivity.SEARCH_PARAMS, ssp);
+                intent.putExtra(MainActivity.WORD_TO_MARK, filterWords.get(0));
                 startActivity(intent);
             }
         });
