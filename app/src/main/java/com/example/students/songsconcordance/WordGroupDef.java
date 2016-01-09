@@ -1,5 +1,6 @@
 package com.example.students.songsconcordance;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -7,12 +8,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.gson.JsonObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import retrofit.Callback;
@@ -27,6 +32,10 @@ public class WordGroupDef extends AppCompatActivity {
     ArrayAdapter<String> arrayAdapter;
     EditText editWordGroupName;
     EditText editWordInWordGroup;
+    Button buttonDefine;
+
+    public RestAdapter adapter;
+    public SongsAPI api;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +52,50 @@ public class WordGroupDef extends AppCompatActivity {
                 arrayWords );
 
         listWords.setAdapter(arrayAdapter);
+
+        Intent intent = getIntent();
+        editWordGroupName.setText(intent.getStringExtra(MainActivity.WORD_GROUP_NAME));
+
+        if (!editWordGroupName.getText().toString().equals("")) {
+            editWordGroupName.setEnabled(false);
+            buttonDefine = (Button) findViewById(R.id.buttonDefine);
+            buttonDefine.setText("UPDATE WORD GROUP");
+            getExistingWordGroupWords();
+        }
+    }
+
+    private void getExistingWordGroupWords() {
+        adapter = new RestAdapter.Builder()
+                .setEndpoint(MainActivity.ENDPOINT)
+                .build();
+
+        api = adapter.create(SongsAPI.class);
+
+        api.getWordGroupWordsFeed(userInstance.getUser().getID(),
+                editWordGroupName.getText().toString(),
+                new Callback<List<JsonObject>>() {
+                    @Override
+                    public void success(List<JsonObject> jsonObjects, Response response) {
+                        for (JsonObject jo : jsonObjects) {
+                            addWordToArray(jo.get("WORD").getAsString());
+                        }
+                    }
+
+                    @Override
+                    public void failure(RetrofitError error) {
+
+                    }
+                });
     }
 
     public void addWord(View view) {
-        if (!editWordInWordGroup.getText().toString().equals("")) {
-            arrayWords.add(editWordInWordGroup.getText().toString());
-            editWordInWordGroup.setText("");
+        addWordToArray(editWordInWordGroup.getText().toString());
+        editWordInWordGroup.setText("");
+    }
+
+    public void addWordToArray(String wordToAdd) {
+        if (!wordToAdd.equals("")) {
+            arrayWords.add(wordToAdd);
             arrayAdapter.notifyDataSetChanged();
         }
         else {
@@ -58,19 +105,17 @@ public class WordGroupDef extends AppCompatActivity {
 
     public void defineWordGroup(View view) {
         if (!editWordGroupName.getText().toString().equals("") && !arrayWords.isEmpty()) {
-            RestAdapter adapter = new RestAdapter.Builder()
+            adapter = new RestAdapter.Builder()
                     .setEndpoint(MainActivity.ENDPOINT)
                     .build();
 
-            SongsAPI api = adapter.create(SongsAPI.class);
+            api = adapter.create(SongsAPI.class);
             EditText editWordGroupName = (EditText) findViewById(R.id.editWordGroupName);
             Map<String, String> params = new HashMap<String, String>();
 
             params.put("USER_ID", "\"" + userInstance.getUser().getID() + "\"");
             params.put("WORD_GROUP_NAME", "\"" + editWordGroupName.getText().toString() + "\"");
             params.put("WORD_GROUP_WORDS", "\"" + arrayWords.toString() + "\"");
-
-//        Toast.makeText(this, params.toString(), Toast.LENGTH_LONG).show();
 
             api.postDefineWordGroup(params, new Callback<String>() {
                 @Override

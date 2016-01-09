@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String SEARCH_PARAMS = "com.example.students.songsconcordance.SEARCHPARAMS";
     public final static String USER = "com.example.students.songsconcordance.USER";
     public final static String WORD_TO_MARK = "com.example.students.songsconcordance.WORDTOMARK";
+    public final static String WORD_GROUP_NAME = "com.example.students.songsconcordance.WORDGROUPNAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

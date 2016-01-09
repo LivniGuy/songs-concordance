@@ -41,6 +41,11 @@ public interface SongsAPI {
     @GET("/feeds/wordgroups.php")
     void getWordGroupsFeed(@Query("USER_ID") String userID, Callback<List<JsonObject>> response);
 
+    @GET("/feeds/wordgroupwords.php")
+    void getWordGroupWordsFeed(@Query("USER_ID") String userID,
+                               @Query("WORD_GROUP_NAME") String wordGroupName,
+                               Callback<List<JsonObject>> response);
+
     @GET("/feeds/lingexps.php")
     void getLingExpsFeed(@Query("USER_ID") String userID, Callback<List<JsonObject>> response);
 

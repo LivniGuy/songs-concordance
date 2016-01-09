@@ -25,6 +25,7 @@
     <string name="action_index_for_word_group">Index for Word Group</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
     <string name="title_activity_work_group_mng">WorkGroupMng</string>
     <string name="title_activity_word_group_mng">WordGroupMng</string>
     <string name="title_activity_words_list">WordsList</string>

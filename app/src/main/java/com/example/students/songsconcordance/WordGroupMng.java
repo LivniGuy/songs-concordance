@@ -56,12 +56,12 @@ public class WordGroupMng extends AppCompatActivity {
             @Override
             public void onItemClick(final AdapterView<?> adapterView, View view, final int i, long l) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(WordGroupMng.this);
-                builder.setMessage("Delete row?");
+                builder.setMessage("Select option:");
 
                 // Add the buttons
                 builder.setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // User clicked OK button
+                        // User clicked DELETE button
                         api.postDeleteObject(userInstance.getUser().getID(),
                                 "WORD_GROUP",
                                 adapterView.getItemAtPosition(i).toString(),
@@ -79,9 +79,13 @@ public class WordGroupMng extends AppCompatActivity {
                         arrayAdapter.notifyDataSetChanged();
                     }
                 });
-                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(R.string.edit, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // User cancelled the dialog
+                        // User clicked EDIT button
+                        Intent intent = new Intent(WordGroupMng.this, WordGroupDef.class);
+                        // Pass word_group_name to intent
+                        intent.putExtra(MainActivity.WORD_GROUP_NAME, adapterView.getItemAtPosition(i).toString());
+                        startActivity(intent);
                     }
                 });
                 AlertDialog dialog = builder.create();
@@ -125,7 +129,6 @@ public class WordGroupMng extends AppCompatActivity {
     public void navToWordGroupDef(View view) {
         Intent intent = new Intent(this, WordGroupDef.class);
         startActivity(intent);
-
     }
 
     @Override
