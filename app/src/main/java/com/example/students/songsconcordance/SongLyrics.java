@@ -215,25 +215,35 @@ public class SongLyrics extends AppCompatActivity {
         }
 
         // Find all occurences in text
-        while(lastIndex != -1){
-            lastIndex = styledString.toString().toLowerCase().indexOf(textToMark.toLowerCase(), lastIndex);
+        String lowerCaseString = styledString.toString().toLowerCase();
+        while (lastIndex != -1) {
+            lastIndex = lowerCaseString.indexOf(textToMark.toLowerCase(), lastIndex);
+            if (lastIndex != -1) {
+                char before = lowerCaseString.charAt(lastIndex - 1);
+                char after = lowerCaseString.charAt(lastIndex + textToMark.length());
 
-            if(lastIndex != -1){
-                spanIndex.add(lastIndex);
-                count ++;
+                if (isNotPartOfWord(before) && (isNotPartOfWord(after))) {
+                    count++;
+                    spanIndex.add(lastIndex);
+                }
                 lastIndex += textToMark.length();
             }
+
         }
 
         // Mark all occurences in text
-        for (Integer index:spanIndex) {
-            styledString.setSpan(new BackgroundColorSpan(Color.LTGRAY), index, index+textToMark.length(), 0);
-            styledString.setSpan(new ForegroundColorSpan(Color.BLACK), index, index+textToMark.length(), 0);
+        for (Integer index : spanIndex) {
+            styledString.setSpan(new BackgroundColorSpan(Color.LTGRAY), index, index + textToMark.length(), 0);
+            styledString.setSpan(new ForegroundColorSpan(Color.BLACK), index, index + textToMark.length(), 0);
         }
 
         textLyrics.setText(styledString);
-        
+
         Toast.makeText(this, "Found " + count + " matches", Toast.LENGTH_LONG).show();
+    }
+
+    private boolean isNotPartOfWord(char sub) {
+        return sub == ' ' || sub == '-' || sub == '\n' || sub == ',';
     }
 
     private void showSongLyricsIndex() {
